@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+}
+  
+#color-generator-form {
+    padding: 50px 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: beige;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+}
+
+#color-selector {
+    width: 80px;
+    height: 55px;
+    border: 0.5px solid rgba(209, 213, 219, 1);
+    color: rgba(229, 229, 229, 1);
+}
+
+#scheme-mode {
+    width: 500px;
+    appearance: none;
+    background-image: url('./images/down-arrow.png');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 20px;
+    font-size: 20px;
+    padding-left: 10px;
+    border-radius: 6px;
+}
+
+#get-color-scheme-btn {
+    background-color: white;
+    border: 1px solid rgba(209, 213, 219, 1);
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 15px;
+    color: rgba(55, 65, 81, 1);
+}
