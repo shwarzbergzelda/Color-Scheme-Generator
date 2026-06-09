@@ -11,11 +11,7 @@ colorGeneratorForm.addEventListener('submit', (e) => {
 
     const hex = color.slice(1)
 
-    fetch(`https://www.thecolorapi.com/scheme?hex=${hex}&mode=${scheme}&count=5`)
-        .then(response => response.json())
-        .then(data => {
-            generateColorScheme(data.colors)
-        })
+    fetchHex(hex, scheme)
 })
 
 function generateColorScheme(colors) {
@@ -43,3 +39,13 @@ document.addEventListener('click', (e) => {
             .catch(err => console.log('Error copying text: ', err))
     }
 })
+
+function fetchHex(hex, scheme) {
+    fetch(`https://www.thecolorapi.com/scheme?hex=${hex}&mode=${scheme}&count=5`)
+        .then(response => response.json())
+        .then(data => {
+            generateColorScheme(data.colors)
+        })
+}
+
+fetchHex('825372', 'monochrome')
